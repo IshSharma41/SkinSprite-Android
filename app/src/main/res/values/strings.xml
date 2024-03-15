@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">DermaPixie</string>
+    <string name="welcome">Welcome to DermaPixie\nUnlock Radiant Skin with DermaPixie</string>
+    <string name="Login">Login</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="UserName">UserName</string>
+    <string name="Password">Password</string>
+    <string name="btn_1">check your problem</string>
+    <string name="btn_2">scan/view your prescriptions</string>
+    <string name="btn_3">meds notifier</string>
+    <string name="btn_4">settings</string>
+    <string name="btn_5">order meds online </string>
+    <string name="btn_6">your account history</string>
+    <string name="HealthTip">Skin health Tip</string>
+    <string name="MailId">abc@example.com</string>
+    <string name="Tip"> Promote hand hygiene and basic sanitation practices to prevent skin infections. Access to clean water and basic hygiene facilities is crucial.</string>
+    <string name="RememberMe">Remember Me</string>
+    <string name="welcome_Para">Experience the future of skincare at your fingertips. DermaPixie offers instant skin analysis, personalized insights, and connects you with top local dermatologists. Explore our advanced features for a seamless and personalized skin health journey. Welcome to DermaPixie – where health meets innovation.</string>
+</resources>
