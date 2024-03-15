@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/online_order_page_bg"
+    android:paddingHorizontal="100dp">
+
+    <TextView
+        android:id="@+id/option_text"
+        android:layout_width="248dp"
+        android:layout_height="52dp"
+        android:padding="16dp"
+        android:text="@string/RecyclerView_Heading"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_1mg"/>
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_PharmEasy"/>
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_Netmeds"/>
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_Medlife"/>
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_Practo"/>
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_Amazon_Pharmacy"/>
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_MedPlus_Mart"/>
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_CVS_Pharmacy"/>
+
+    <Button
+        android:layout_marginVertical="10dp"
+        android:id="@+id/option_button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Option_Apollo_To_Name_A_Few"/>
+
+
+</LinearLayout>

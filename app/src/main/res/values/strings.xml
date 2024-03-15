@@ -15,5 +15,24 @@
     <string name="MailId">abc@example.com</string>
     <string name="Tip"> Promote hand hygiene and basic sanitation practices to prevent skin infections. Access to clean water and basic hygiene facilities is crucial.</string>
     <string name="RememberMe">Remember Me</string>
+    <string name="RecyclerView_Heading">Order Medicines Online </string>
+    <string name="Option_1mg">Order medicine using  1mg </string>
+    <string name="Option_PharmEasy">Order medicine using PharmEasy</string>
+    <string name="Option_Netmeds">Order medicine using Netmeds</string>
+    <string name="Option_Medlife">Order medicine using Medlife</string>
+    <string name="Option_Practo">Order medicine using Practo</string>
+    <string name="Option_Amazon_Pharmacy">Order medicine using Amazon Pharmacy</string>
+    <string name="Option_Apollo_To_Name_A_Few">Order medicine using Apollo</string>
+    <string name="Option_1mg_url">https://www.1mg.com/</string>
+    <string name="Option_PharmEasy_url">https://www.pharmeasy.in/</string>
+    <string name="Option_Netmeds_url">https://www.netmeds.com/</string>
+    <string name="Option_Medlife_url">https://www.medlife.com/</string>
+    <string name="Option_Practo_url">https://www.practo.com/</string>
+    <string name="Option_Amazon_Pharmacy_url">https://www.amazon.in/pharmacy</string>
+    <string name="Option_MedPlus_Mart_url">https://www.medplusmart.com/</string>
+    <string name="Option_CVS_Pharmacy_url">https://www.cvs.com/</string>
+    <string name="Option_Apollo_To_Name_A_Few_url">https://www.apollopharmacy.in/</string>
+    <string name="Option_CVS_Pharmacy">Order medicine using CVS Pharmacy</string>
+    <string name="Option_MedPlus_Mart">Order medicine using MedPlus Mart</string>
     <string name="welcome_Para">Experience the future of skincare at your fingertips. DermaPixie offers instant skin analysis, personalized insights, and connects you with top local dermatologists. Explore our advanced features for a seamless and personalized skin health journey. Welcome to DermaPixie – where health meets innovation.</string>
 </resources>
