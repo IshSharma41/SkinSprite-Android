@@ -89,6 +89,41 @@
         app:layout_constraintVertical_bias="1.0">
 
         <TableRow
+            android:id="@+id/tableRow"
+            android:layout_width="409dp"
+            android:layout_height="114dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036">
+
+            <ImageButton
+                android:id="@+id/btn1"
+                android:layout_width="141dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_login_signup_button"
+                android:clickable="true"
+                app:srcCompat="@drawable/btn_1" />
+            <ImageButton
+                android:id="@+id/btn2"
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_login_signup_button"
+                android:clickable="true"
+                app:srcCompat="@drawable/btn_2" />
+            <ImageButton
+                android:id="@+id/btn3"
+                android:layout_width="137dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_login_signup_button"
+                android:clickable="true"
+                app:srcCompat="@drawable/btn_3" />
+        </TableRow>
+
+        <TableRow
             android:id="@+id/tableRow2"
             android:layout_width="413dp"
             android:layout_height="111dp"
@@ -99,296 +134,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableRow">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageButton
                 android:id="@+id/btn4"
-                android:layout_width="137dp"
+                android:layout_width="141dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:srcCompat="@drawable/btn_4" />
 
-                <ImageView
-                    android:id="@+id/iconbg4"
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.111"
-                    app:srcCompat="@drawable/bg_button_type2" />
-
-                <TextView
-                    android:id="@+id/textbtn4"
-                    android:layout_width="134dp"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:text="@string/btn_4"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView7"
-                    app:layout_constraintVertical_bias="0.0"
-                    tools:ignore="UnknownId" />
-
-                <ImageView
-                    android:id="@+id/imageView12"
-                    android:layout_width="81dp"
-                    android:layout_height="63dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/iconbg4"
-                    app:layout_constraintEnd_toEndOf="@+id/iconbg4"
-                    app:layout_constraintStart_toStartOf="@+id/iconbg4"
-                    app:layout_constraintTop_toTopOf="@+id/iconbg4"
-                    app:srcCompat="@drawable/btn_4" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageButton
                 android:id="@+id/btn5"
                 android:layout_width="137dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:srcCompat="@drawable/btn_5" />
 
-                <ImageView
-                    android:id="@+id/iconbg5"
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.486"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.146"
-                    app:srcCompat="@drawable/bg_button_type2" />
-
-                <TextView
-                    android:id="@+id/textbtn5"
-                    android:layout_width="134dp"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:text="@string/btn_5"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconbg5"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <ImageView
-                    android:id="@+id/imageView13"
-                    android:layout_width="83dp"
-                    android:layout_height="62dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/iconbg5"
-                    app:layout_constraintEnd_toEndOf="@+id/iconbg5"
-                    app:layout_constraintStart_toStartOf="@+id/iconbg5"
-                    app:layout_constraintTop_toTopOf="@+id/iconbg5"
-                    app:srcCompat="@drawable/btn_5" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageButton
                 android:id="@+id/btn6"
-                android:layout_width="131dp"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <ImageView
-                    android:id="@+id/iconbg6"
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.111"
-                    app:srcCompat="@drawable/bg_button_type2" />
-
-                <TextView
-                    android:id="@+id/textbtn6"
-                    android:layout_width="134dp"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:text="@string/btn_6"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconbg6"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <ImageView
-                    android:id="@+id/imageView14"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/iconbg6"
-                    app:layout_constraintEnd_toEndOf="@+id/iconbg6"
-                    app:layout_constraintStart_toStartOf="@+id/iconbg6"
-                    app:layout_constraintTop_toTopOf="@+id/iconbg6"
-                    app:srcCompat="@drawable/btn_6" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow"
-            android:layout_width="409dp"
-            android:layout_height="114dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.036">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btn1"
                 android:layout_width="137dp"
                 android:layout_height="match_parent"
+                android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
+                app:srcCompat="@drawable/btn_6" />
 
-                <ImageView
-                    android:id="@+id/iconbg1"
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.486"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.121"
-                    app:srcCompat="@drawable/bg_button_type2" />
+            </TableRow>
 
-                <TextView
-                    android:id="@+id/textbtn1"
-                    android:layout_width="134dp"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:text="@string/btn_1"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconbg1"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <ImageView
-                    android:id="@+id/imageView9"
-                    android:layout_width="69dp"
-                    android:layout_height="52dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/iconbg1"
-                    app:layout_constraintEnd_toEndOf="@+id/iconbg1"
-                    app:layout_constraintHorizontal_bias="0.516"
-                    app:layout_constraintStart_toStartOf="@+id/iconbg1"
-                    app:layout_constraintTop_toTopOf="@+id/iconbg1"
-                    app:layout_constraintVertical_bias="0.611"
-                    app:srcCompat="@drawable/btn_1" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btn2"
-                android:layout_width="137dp"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <TextView
-                    android:id="@+id/textbtn2"
-                    android:layout_width="134dp"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:text="@string/btn_2"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.333"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconbg2"
-                    app:layout_constraintVertical_bias="0.945" />
-
-                <ImageView
-                    android:id="@+id/iconbg2"
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.432"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.17"
-                    app:srcCompat="@drawable/bg_button_type2"
-                    tools:ignore="MissingConstraints" />
-
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="85dp"
-                    android:layout_height="55dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="7dp"
-                    app:layout_constraintBottom_toTopOf="@+id/textbtn2"
-                    app:layout_constraintEnd_toEndOf="@+id/iconbg2"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/iconbg2"
-                    app:layout_constraintTop_toTopOf="@+id/iconbg2"
-                    app:srcCompat="@drawable/btn_2" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btn3"
-                android:layout_width="137dp"
-                android:layout_height="match_parent"
-                tools:ignore="VisualLintBounds"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <TextView
-                    android:id="@+id/textbtn3"
-                    android:layout_width="134dp"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:text="@string/btn_3"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.333"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iconbg3"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <ImageView
-                    android:id="@+id/iconbg3"
-                    android:layout_width="100dp"
-                    android:layout_height="70dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.432"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.121"
-                    app:srcCompat="@drawable/bg_button_type2" />
-
-                <ImageView
-                    android:id="@+id/imageView11"
-                    android:layout_width="78dp"
-                    android:layout_height="59dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textbtn3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.492"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/btn3"
-                    app:layout_constraintVertical_bias="0.29"
-                    app:srcCompat="@drawable/btn_3" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-        </TableRow>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
@@ -399,7 +170,6 @@
             android:background="@drawable/health_tip_bg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tableRow2"
             app:layout_constraintVertical_bias="0.0">
@@ -458,7 +228,7 @@
 
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/logoutBtn"
                 android:layout_width="95dp"
                 android:layout_height="97dp"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -35,4 +35,7 @@
     <string name="Option_CVS_Pharmacy">Order medicine using CVS Pharmacy</string>
     <string name="Option_MedPlus_Mart">Order medicine using MedPlus Mart</string>
     <string name="welcome_Para">Experience the future of skincare at your fingertips. DermaPixie offers instant skin analysis, personalized insights, and connects you with top local dermatologists. Explore our advanced features for a seamless and personalized skin health journey. Welcome to DermaPixie – where health meets innovation.</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="upload">Upload</string>
 </resources>

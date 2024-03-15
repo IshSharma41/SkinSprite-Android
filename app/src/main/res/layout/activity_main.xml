@@ -88,10 +88,10 @@
                 android:background="@drawable/bg_login_signup_button">
 
                 <TextView
-                    android:clickable="true"
                     android:id="@+id/login"
                     android:layout_width="248dp"
                     android:layout_height="32dp"
+                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/Login"
                     android:textColor="@color/lemon_chiffon"
@@ -118,10 +118,10 @@
                 android:background="@drawable/bg_login_signup_button">
 
                 <TextView
-                    android:clickable="true"
                     android:id="@+id/signup"
                     android:layout_width="248dp"
                     android:layout_height="32dp"
+                    android:clickable="true"
                     android:gravity="center"
                     android:text="@string/SignUp"
                     android:textColor="@color/lemon_chiffon"
@@ -137,5 +137,17 @@
 
 
     </TableLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout"
+        app:srcCompat="@drawable/ic_looks_one_black_24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
