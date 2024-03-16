@@ -1,0 +1,22 @@
+<!-- activity_display_result.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result:"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:padding="16dp" />
+
+    <TextView
+        android:id="@+id/textViewJson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="19dp" />
+
+</LinearLayout>

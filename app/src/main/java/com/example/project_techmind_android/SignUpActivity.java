@@ -1,5 +1,6 @@
 package com.example.project_techmind_android;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -77,6 +78,10 @@ public class SignUpActivity extends AppCompatActivity {
 
                                 // Add your logic to navigate to the next screen
                                 Toast.makeText(SignUpActivity.this, "Signup successful. Please log in.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(SignUpActivity.this, FeaturesPageActivity.class);
+                                startActivity(intent);
+                                finish();
+
                             } else {
                                 // Signup failed
                                 Toast.makeText(SignUpActivity.this, "Signup failed. Please try again.", Toast.LENGTH_SHORT).show();

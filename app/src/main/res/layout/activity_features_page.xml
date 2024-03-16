@@ -102,11 +102,12 @@
 
             <ImageButton
                 android:id="@+id/btn1"
-                android:layout_width="141dp"
+                android:layout_width="121dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
                 app:srcCompat="@drawable/btn_1" />
+
             <ImageButton
                 android:id="@+id/btn2"
                 android:layout_width="137dp"
@@ -114,9 +115,10 @@
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
                 app:srcCompat="@drawable/btn_2" />
+
             <ImageButton
                 android:id="@+id/btn3"
-                android:layout_width="137dp"
+                android:layout_width="123dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
@@ -125,8 +127,8 @@
 
         <TableRow
             android:id="@+id/tableRow2"
-            android:layout_width="413dp"
-            android:layout_height="111dp"
+            android:layout_width="397dp"
+            android:layout_height="109dp"
             android:layout_marginStart="2dp"
             android:layout_marginBottom="266dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -136,8 +138,8 @@
 
             <ImageButton
                 android:id="@+id/btn4"
-                android:layout_width="141dp"
-                android:layout_height="match_parent"
+                android:layout_width="115dp"
+                android:layout_height="98dp"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
                 app:srcCompat="@drawable/btn_4" />
@@ -152,13 +154,13 @@
 
             <ImageButton
                 android:id="@+id/btn6"
-                android:layout_width="137dp"
+                android:layout_width="123dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
                 app:srcCompat="@drawable/btn_6" />
 
-            </TableRow>
+        </TableRow>
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -238,6 +240,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/logout_btn" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floatingActionButtonChatBot"
+                android:layout_width="141dp"
+                android:layout_height="66dp"
+                android:clickable="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/logoutBtn"
+                app:layout_constraintHorizontal_bias="0.068"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.484"
+                app:srcCompat="@drawable/icon_bot" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 

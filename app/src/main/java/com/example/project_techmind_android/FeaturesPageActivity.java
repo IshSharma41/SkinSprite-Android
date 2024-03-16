@@ -19,6 +19,7 @@ import com.example.project_techmind_android.PastPrescriptionsActivity;
 import com.example.project_techmind_android.SettingsActivity;
 import com.example.project_techmind_android.UploadActivity;
 import com.example.project_techmind_android.UserHistoryActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class FeaturesPageActivity extends AppCompatActivity {
 
@@ -104,6 +105,15 @@ public class FeaturesPageActivity extends AppCompatActivity {
                 Intent intent = new Intent(FeaturesPageActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish(); // Close the current activity
+            }
+        });
+        FloatingActionButton fabChatbot = findViewById(R.id.floatingActionButtonChatBot);
+        fabChatbot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Open ChatbotActivity
+                Intent intent = new Intent(FeaturesPageActivity.this, ChatbotActivity.class);
+                startActivity(intent);
             }
         });
     }}
