@@ -23,6 +23,6 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish(); // Finish the current activity so that it's not accessible via the back button
             }
-        }, 200);
+        }, 2000);
     }
 }

@@ -90,19 +90,19 @@
 
         <TableRow
             android:id="@+id/tableRow"
-            android:layout_width="409dp"
-            android:layout_height="114dp"
+            android:layout_width="377dp"
+            android:layout_height="108dp"
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.036">
+            app:layout_constraintVertical_bias="0.041">
 
             <ImageButton
                 android:id="@+id/btn1"
-                android:layout_width="121dp"
+                android:layout_width="125dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
@@ -110,7 +110,7 @@
 
             <ImageButton
                 android:id="@+id/btn2"
-                android:layout_width="137dp"
+                android:layout_width="128dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
@@ -118,7 +118,7 @@
 
             <ImageButton
                 android:id="@+id/btn3"
-                android:layout_width="123dp"
+                android:layout_width="124dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
@@ -127,8 +127,8 @@
 
         <TableRow
             android:id="@+id/tableRow2"
-            android:layout_width="397dp"
-            android:layout_height="109dp"
+            android:layout_width="375dp"
+            android:layout_height="110dp"
             android:layout_marginStart="2dp"
             android:layout_marginBottom="266dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -138,15 +138,15 @@
 
             <ImageButton
                 android:id="@+id/btn4"
-                android:layout_width="115dp"
-                android:layout_height="98dp"
+                android:layout_width="123dp"
+                android:layout_height="match_parent"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
                 app:srcCompat="@drawable/btn_4" />
 
             <ImageButton
                 android:id="@+id/btn5"
-                android:layout_width="137dp"
+                android:layout_width="128dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_login_signup_button"
                 android:clickable="true"
