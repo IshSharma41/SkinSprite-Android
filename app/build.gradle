@@ -45,7 +45,6 @@ dependencies {
     implementation libs.postgresql
     implementation libs.retrofit
     implementation libs.converter.gson
-
-
+    implementation libs.mysql.connector.java
 
 }

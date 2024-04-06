@@ -66,11 +66,9 @@ public class UploadActivity extends AppCompatActivity {
             }
         });
 
-        Retrofit retrofit = new Retrofit.Builder()
-                                    .baseUrl("https://bcb2-2402-3a80-1bdd-8390-64e0-7c60-50ab-b07.ngrok-free.app")
-                                    .addConverterFactory(GsonConverterFactory.create())
-                                    .build();
+        Retrofit retrofit = RetrofitClient.getClient("https://ce37-2401-4900-36a7-414a-873a-f947-7e8a-ef6d.ngrok-free.app");
         apiService = retrofit.create(ApiService.class);
+
 
         uploadButton.setOnClickListener(v -> openGallery());
     }
@@ -91,6 +89,7 @@ public class UploadActivity extends AppCompatActivity {
     }
 
     private void uploadImage() {
+        resultTextView.setText(" waiting for Result Text ");
         if (imageUri != null) {
             try {
                 File imageFile = new File(getRealPathFromURI(imageUri));
