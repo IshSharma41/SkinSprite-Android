@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Html;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,12 +15,17 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
@@ -32,7 +38,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class UploadActivity extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "UploadActivity";
 
     private ImageView imageView;
     private Button uploadButton;
@@ -51,7 +57,7 @@ public class UploadActivity extends AppCompatActivity {
         resultTextView = findViewById(R.id.resultTextView);
 
         Retrofit retrofit = new Retrofit.Builder()
-                                    .baseUrl("https://85da-14-139-241-214.ngrok-free.app")
+                                    .baseUrl("https://bcb2-2402-3a80-1bdd-8390-64e0-7c60-50ab-b07.ngrok-free.app")
                                     .addConverterFactory(GsonConverterFactory.create())
                                     .build();
         apiService = retrofit.create(ApiService.class);
@@ -77,7 +83,6 @@ public class UploadActivity extends AppCompatActivity {
     private void uploadImage() {
         if (imageUri != null) {
             try {
-                // Read image file into byte array
                 File imageFile = new File(getRealPathFromURI(imageUri));
                 FileInputStream fis = new FileInputStream(imageFile);
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -89,17 +94,13 @@ public class UploadActivity extends AppCompatActivity {
                 fis.close();
                 byte[] imageData = baos.toByteArray();
 
-                // Convert byte array to base64 string
                 String imageDataBase64 = android.util.Base64.encodeToString(imageData, android.util.Base64.DEFAULT);
 
-                // Create JSON object with image data
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("image", imageDataBase64);
 
-                // Create request body with JSON content type
                 RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonObject.toString());
 
-                // Proceed with Retrofit call
                 Call<JsonObject> call = apiService.uploadImage(requestBody);
                 call.enqueue(new Callback<JsonObject>() {
                     @Override
@@ -108,31 +109,31 @@ public class UploadActivity extends AppCompatActivity {
                             try {
                                 JsonObject responseBody = response.body();
                                 if (responseBody != null && responseBody.has("prediction")) {
-                                    // Extract the prediction JSON object
                                     JsonObject predictionObject = responseBody.getAsJsonObject("prediction");
-
-                                    // Convert the prediction JSON object to a string for display
-                                    String predictionString = predictionObject.toString();
-
-                                    // Format the prediction string
-                                    StringBuilder formattedPrediction = new StringBuilder();
-                                    boolean isFirst = true;
-                                    for (int i = 0; i < predictionString.length(); i++) {
-                                        char c = predictionString.charAt(i);
-                                        if (c == ',') {
-                                            formattedPrediction.append(",\n");
-                                            isFirst = true;
-                                        } else {
-                                            if (isFirst) {
-                                                formattedPrediction.append("\n");
-                                                isFirst = false;
-                                            }
-                                            formattedPrediction.append(c);
+                                    Set<Map.Entry<String, JsonElement>> entrySet = predictionObject.entrySet();
+                                    TreeMap<Double, String> sortedMap = new TreeMap<>(Collections.reverseOrder());
+                                    for (Map.Entry<String, JsonElement> entry : entrySet) {
+                                        String key = entry.getKey();
+                                        JsonElement valueElement = entry.getValue();
+                                        if (valueElement.isJsonPrimitive() && valueElement.getAsJsonPrimitive().isNumber()) {
+                                            double value = valueElement.getAsDouble();
+                                            sortedMap.put(value, key);
                                         }
                                     }
 
-                                    // Set the formatted prediction string in the TextView
-                                    resultTextView.setText(formattedPrediction.toString());
+                                    int count = 0;
+                                    StringBuilder formattedPrediction = new StringBuilder();
+                                    for (Map.Entry<Double, String> entry : sortedMap.entrySet()) {
+                                        // Bold for names and italic for numbers using HTML formatting
+                                        formattedPrediction.append("<b>").append(entry.getValue()).append("</b>: ").append("<i>").append(entry.getKey()).append("</i>").append("<br/><br/>");
+                                        count++;
+                                        if (count >= 3) {
+                                            break;
+                                        }
+                                    }
+
+// Set HTML formatted text to TextView
+                                    resultTextView.setText(Html.fromHtml(formattedPrediction.toString()));
                                 } else {
                                     Log.e(TAG, "Prediction key not found in the response");
                                     Toast.makeText(UploadActivity.this, "Prediction key not found in the response", Toast.LENGTH_SHORT).show();
@@ -147,10 +148,8 @@ public class UploadActivity extends AppCompatActivity {
                         }
                     }
 
-
                     @Override
                     public void onFailure(Call<JsonObject> call, Throwable t) {
-                        // Handle failure here
                         Log.e(TAG, "Network error: " + t.getMessage());
                         Toast.makeText(UploadActivity.this, "Network error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                     }
@@ -168,7 +167,6 @@ public class UploadActivity extends AppCompatActivity {
         String[] projection = { MediaStore.Images.Media.DATA };
         Cursor cursor = getContentResolver().query(contentUri, projection, null, null, null);
         if (cursor == null) {
-            // Error handling, return null or appropriate fallback
             return null;
         }
         int columnIndex = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
