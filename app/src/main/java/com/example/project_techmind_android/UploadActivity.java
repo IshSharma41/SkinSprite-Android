@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Html;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -55,6 +56,15 @@ public class UploadActivity extends AppCompatActivity {
         imageView = findViewById(R.id.imageView);
         uploadButton = findViewById(R.id.uploadButton);
         resultTextView = findViewById(R.id.resultTextView);
+        Button dictionaryButton = findViewById(R.id.diseaseDictionaryButton);
+        dictionaryButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create intent to navigate to Dictionary activity
+                Intent intent = new Intent(UploadActivity.this, Dictionary.class);
+                startActivity(intent);
+            }
+        });
 
         Retrofit retrofit = new Retrofit.Builder()
                                     .baseUrl("https://bcb2-2402-3a80-1bdd-8390-64e0-7c60-50ab-b07.ngrok-free.app")

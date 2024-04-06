@@ -44,6 +44,55 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
+    <string name="skin_conditions_info">
+    1. Eczema (Atopic Dermatitis):\n
+    Eczema, also known as atopic dermatitis, is a common skin condition characterized by red, itchy, and inflamed patches of skin. It can occur anywhere on the body and is believed to be caused by a combination of genetic and environmental factors. Symptoms include dry, itchy, and scaly skin, and it can be managed with proper treatment after consulting a healthcare professional.\n\n
+
+    2. Acne and Rosacea:\n
+    Acne and Rosacea are skin conditions with different underlying causes. Acne is caused by clogged hair follicles and presents with pimples, while Rosacea causes redness and visible blood vessels in the face. Both can affect people of all ages and require proper diagnosis and treatment by a qualified healthcare professional.\n\n
+
+    3. Actinic Keratosis and Basal Cell Carcinoma:\n
+    These conditions are caused by sun exposure and present as scaly, rough patches on the skin. They can potentially be serious and should be treated by a healthcare professional, as they may indicate skin cancer.\n\n
+
+    4. Exanthems and Drug Eruptions:\n
+    Skin conditions triggered by medications, infections, or allergic reactions, causing rash or skin irritation. Immediate consultation with a healthcare professional is advised for proper diagnosis and treatment.\n\n
+
+    5. Herpes:\n
+    Herpes is a viral infection causing painful blisters or sores on the mouth or genitals. It\'s highly contagious and can be managed with antiviral medications, but there\'s no cure.\n\n
+
+    6. Light Diseases and Disorders of Pigmentation:\n
+    Various skin conditions affecting skin color, ranging from minor discolorations to more serious disorders. Diagnosis and treatment should be done by a qualified healthcare professional.\n\n
+
+    7. Lupus (Systemic Lupus Erythematosus):\n
+    A chronic autoimmune disease affecting multiple organs, characterized by inflammation and damage. Management involves medications to control symptoms and prevent flares.\n\n
+
+    8. Melanoma Skin Cancer:\n
+    A type of cancer affecting melanocytes, characterized by changes in moles. Early detection and treatment are crucial for successful outcomes.\n\n
+
+    9. Poison Ivy and Contact Dermatitis:\n
+    Skin conditions caused by contact with irritants, resulting in redness, itching, and blisters. Proper treatment involves avoiding the irritant and using medications as prescribed by a healthcare professional.\n\n
+
+    10. Psoriasis and Lichen Planus:\n
+    Chronic inflammatory skin conditions causing red, scaly patches (psoriasis) or itchy, purplish bumps (lichen planus). Management requires a comprehensive treatment plan from a healthcare professional.\n\n
+
+    11. Seborrheic Keratoses and Benign Tumors:\n
+    Non-cancerous skin growths, usually found on sun-exposed areas. Although benign, they may require evaluation by a healthcare professional.\n\n
+
+    12. Systemic Diseases:\n
+    Conditions affecting the whole body, characterized by symptoms like fatigue, fever, and skin rashes. Diagnosis and treatment should be done by a qualified healthcare professional.\n\n
+
+    13. Tinea (Ringworm) and Fungal Infections:\n
+    Skin conditions caused by various fungi, leading to red, itchy, and scaly skin. Prompt treatment is essential to prevent spreading and complications.\n\n
+
+    14. Urticaria (Hives):\n
+    A common skin condition characterized by raised, itchy welts on the skin, often triggered by allergies. Management involves identifying and avoiding triggers, along with appropriate medications.\n\n
+
+    15. Vascular Tumors:\n
+    Abnormal growths in blood vessels, which can be benign or malignant. Diagnosis and treatment should be done by a qualified healthcare professional.\n\n
+
+    16. Warts and Viral Infections:\n
+    Common skin conditions caused by viruses, including warts and molluscum contagiosum. Treatment options are available to help speed up healing and reduce transmission risks.\n
+</string>
 
 
 </resources>
