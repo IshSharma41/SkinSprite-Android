@@ -36,5 +36,25 @@
             android:text="Result Text"
             android:textSize="16sp" />
 
+        <!-- Button for navigating to detailed disease dictionary -->
+        <Button
+            android:id="@+id/diseaseDictionaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/resultTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Disease Dictionary" />
+
+        <!-- Button for navigating to doctor recommendations on map -->
+        <Button
+            android:id="@+id/doctorMapButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/diseaseDictionaryButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Doctor Recommendations Map" />
+
     </RelativeLayout>
 </ScrollView>
