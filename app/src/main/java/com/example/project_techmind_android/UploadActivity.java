@@ -66,7 +66,7 @@ public class UploadActivity extends AppCompatActivity {
             }
         });
 
-        Retrofit retrofit = RetrofitClient.getClient("https://ce37-2401-4900-36a7-414a-873a-f947-7e8a-ef6d.ngrok-free.app");
+        Retrofit retrofit = RetrofitClient.getClient("https://4995-27-62-172-193.ngrok-free.app");
         apiService = retrofit.create(ApiService.class);
 
 
@@ -119,30 +119,23 @@ public class UploadActivity extends AppCompatActivity {
                                 JsonObject responseBody = response.body();
                                 if (responseBody != null && responseBody.has("prediction")) {
                                     JsonObject predictionObject = responseBody.getAsJsonObject("prediction");
-                                    Set<Map.Entry<String, JsonElement>> entrySet = predictionObject.entrySet();
-                                    TreeMap<Double, String> sortedMap = new TreeMap<>(Collections.reverseOrder());
-                                    for (Map.Entry<String, JsonElement> entry : entrySet) {
+                                    String highestPrediction = "";
+                                    double highestValue = Double.MIN_VALUE;
+                                    for (Map.Entry<String, JsonElement> entry : predictionObject.entrySet()) {
                                         String key = entry.getKey();
                                         JsonElement valueElement = entry.getValue();
                                         if (valueElement.isJsonPrimitive() && valueElement.getAsJsonPrimitive().isNumber()) {
                                             double value = valueElement.getAsDouble();
-                                            sortedMap.put(value, key);
+                                            if (value > highestValue) {
+                                                highestValue = value;
+                                                highestPrediction = key;
+                                            }
                                         }
                                     }
 
-                                    int count = 0;
-                                    StringBuilder formattedPrediction = new StringBuilder();
-                                    for (Map.Entry<Double, String> entry : sortedMap.entrySet()) {
-                                        // Bold for names and italic for numbers using HTML formatting
-                                        formattedPrediction.append("<b>").append(entry.getValue()).append("</b>: ").append("<i>").append(entry.getKey()).append("</i>").append("<br/><br/>");
-                                        count++;
-                                        if (count >= 3) {
-                                            break;
-                                        }
-                                    }
-
-// Set HTML formatted text to TextView
-                                    resultTextView.setText(Html.fromHtml(formattedPrediction.toString()));
+                                    // Set the highest prediction to the TextView
+                                    String result = "<b>" + highestPrediction + "</b>: <i>" + highestValue + "</i>";
+                                    resultTextView.setText(Html.fromHtml(result));
                                 } else {
                                     Log.e(TAG, "Prediction key not found in the response");
                                     Toast.makeText(UploadActivity.this, "Prediction key not found in the response", Toast.LENGTH_SHORT).show();
@@ -156,6 +149,7 @@ public class UploadActivity extends AppCompatActivity {
                             Toast.makeText(UploadActivity.this, "Failed to receive prediction", Toast.LENGTH_SHORT).show();
                         }
                     }
+
 
                     @Override
                     public void onFailure(Call<JsonObject> call, Throwable t) {

@@ -29,7 +29,25 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                loginUser();
+                String username = editTextUsername.getText().toString().trim();
+                String password = editTextPassword.getText().toString().trim();
+
+                // Check if username and password are not empty
+                if (username.isEmpty() || password.isEmpty()) {
+                    Toast.makeText(LoginActivity.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // For now, let's assume login is successful
+                // You can replace this with your actual login logic later
+
+                // Show login successful toast
+                Toast.makeText(LoginActivity.this, "Login successful", Toast.LENGTH_SHORT).show();
+
+                // Forward user to FeaturesPageActivity
+                Intent intent = new Intent(LoginActivity.this, FeaturesPageActivity.class);
+                startActivity(intent);
+                finish(); // Optional: finish LoginActivity to prevent going back to it on back press
             }
         });
     }

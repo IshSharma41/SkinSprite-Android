@@ -3,6 +3,7 @@ package com.example.project_techmind_android;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class MySQLConnection {
     private static final String URL = "jdbc:mysql://localhost:3306/skinsprite";
@@ -12,8 +13,17 @@ public class MySQLConnection {
     public static Connection getConnection() {
         Connection connection = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Setting up SSL/TLS properties for encryption
+            Properties properties = new Properties();
+            properties.setProperty("useSSL", "true");
+            properties.setProperty("verifyServerCertificate", "true");
+            properties.setProperty("requireSSL", "true");
+            properties.setProperty("user", USER);
+            properties.setProperty("password", PASSWORD);
+
+            connection = DriverManager.getConnection(URL, properties);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
